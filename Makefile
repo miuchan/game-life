@@ -1,7 +1,7 @@
 # Game Boy模拟器 Makefile
 # 简化编译和运行过程
 
-.PHONY: all build run clean check test release help
+.PHONY: all build run clean check test release help rom
 
 # 默认目标
 all: build
@@ -36,6 +36,7 @@ test:
 clean:
 	@echo "🧹 清理构建文件..."
 	cargo clean
+	rm -f *.gb *.rom
 	@echo "✅ 清理完成！"
 
 # 发布构建（优化版本）
@@ -48,6 +49,18 @@ release:
 run-release: release
 	@echo "🚀 运行发布版本..."
 	cargo run --release
+
+# 生成ROM文件
+rom: release
+	@echo "🎮 生成Game Boy ROM文件..."
+	cargo run --release --bin rom-generator
+	@echo "✅ ROM文件生成完成！"
+
+# 生成ROM文件（调试版本）
+rom-debug: build
+	@echo "🎮 生成Game Boy ROM文件（调试版本）..."
+	cargo run --bin rom-generator
+	@echo "✅ ROM文件生成完成！"
 
 # 格式化代码
 fmt:
@@ -71,11 +84,14 @@ help:
 	@echo "  clean        - 清理构建文件"
 	@echo "  release      - 构建发布版本"
 	@echo "  run-release  - 运行发布版本"
+	@echo "  rom          - 生成Game Boy ROM文件"
+	@echo "  rom-debug    - 生成ROM文件（调试版本）"
 	@echo "  fmt          - 格式化代码"
 	@echo "  lint         - 代码检查"
 	@echo "  help         - 显示此帮助信息"
 	@echo ""
 	@echo "示例："
 	@echo "  make run     - 构建并运行模拟器"
+	@echo "  make rom     - 生成可在Game Boy模拟器中运行的ROM文件"
 	@echo "  make clean   - 清理所有构建文件"
 	@echo "  make release - 构建优化版本"
