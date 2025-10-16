@@ -51,6 +51,10 @@ path = "src/bin/spacetime_entanglement.rs"
 name = "nintendo-fixed-point"
 path = "src/bin/nintendo_fixed_point.rs"
 
+[[bin]]
+name = "gba-demo"
+path = "src/bin/gba_demo.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0

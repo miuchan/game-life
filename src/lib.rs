@@ -7,6 +7,7 @@ pub mod emulator;
 pub mod rom;
 pub mod gpu;
 pub mod debug;
+pub mod gba;
 
 pub use emulator::{GameBoy, AdvancedGameBoy};
 pub use rom::RomGenerator;

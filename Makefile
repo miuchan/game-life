@@ -98,6 +98,12 @@ nintendo: release
 	cargo run --release --bin nintendo-fixed-point
 	@echo "✅ 任天堂不动点演示完成！"
 
+# 运行GBA演示
+gba: release
+	@echo "🎮 运行GBA模拟器演示..."
+	cargo run --release --bin gba-demo
+	@echo "✅ GBA演示完成！"
+
 # 生成ROM文件（调试版本）
 rom-debug: build
 	@echo "🎮 生成Game Boy ROM文件（调试版本）..."
