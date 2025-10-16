@@ -39,6 +39,10 @@ path = "src/bin/sweet_life_optimized.rs"
 name = "quantum-resistant-demo"
 path = "src/bin/quantum_resistant_demo.rs"
 
+[[bin]]
+name = "ping-pong-automaton"
+path = "src/bin/ping_pong_automaton.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0
