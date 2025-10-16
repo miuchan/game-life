@@ -35,6 +35,10 @@ path = "src/bin/sweet_life_game.rs"
 name = "sweet-life-optimized"
 path = "src/bin/sweet_life_optimized.rs"
 
+[[bin]]
+name = "quantum-resistant-demo"
+path = "src/bin/quantum_resistant_demo.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0

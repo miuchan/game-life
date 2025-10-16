@@ -74,6 +74,12 @@ sweet-life-opt: release
 	cargo run --release --bin sweet-life-optimized
 	@echo "✅ 甜甜的生命游戏（凸优化版）完成！"
 
+# 运行抗量子算法演示
+quantum-demo: release
+	@echo "🔐 运行抗量子算法可视化演示..."
+	cargo run --release --bin quantum-resistant-demo
+	@echo "✅ 抗量子算法演示完成！"
+
 # 生成ROM文件（调试版本）
 rom-debug: build
 	@echo "🎮 生成Game Boy ROM文件（调试版本）..."
