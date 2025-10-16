@@ -23,6 +23,10 @@ path = "src/main.rs"
 name = "rom-generator"
 path = "src/bin/rom_generator.rs"
 
+[[bin]]
+name = "advanced-demo"
+path = "src/bin/advanced_demo.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0

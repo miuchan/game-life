@@ -56,6 +56,12 @@ rom: release
 	cargo run --release --bin rom-generator
 	@echo "✅ ROM文件生成完成！"
 
+# 运行高级演示
+advanced-demo: release
+	@echo "🎮 运行高级演示程序..."
+	cargo run --release --bin advanced-demo
+	@echo "✅ 高级演示完成！"
+
 # 生成ROM文件（调试版本）
 rom-debug: build
 	@echo "🎮 生成Game Boy ROM文件（调试版本）..."
