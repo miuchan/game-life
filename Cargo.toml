@@ -47,6 +47,10 @@ path = "src/bin/ping_pong_automaton.rs"
 name = "spacetime-entanglement"
 path = "src/bin/spacetime_entanglement.rs"
 
+[[bin]]
+name = "nintendo-fixed-point"
+path = "src/bin/nintendo_fixed_point.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0
