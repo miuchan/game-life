@@ -62,6 +62,18 @@ advanced-demo: release
 	cargo run --release --bin advanced-demo
 	@echo "✅ 高级演示完成！"
 
+# 运行甜甜的生命游戏
+sweet-life: release
+	@echo "🍭 运行甜甜的生命游戏..."
+	cargo run --release --bin sweet-life-game
+	@echo "✅ 甜甜的生命游戏完成！"
+
+# 运行甜甜的生命游戏（凸优化版）
+sweet-life-opt: release
+	@echo "🍭 运行甜甜的生命游戏（凸优化版）..."
+	cargo run --release --bin sweet-life-optimized
+	@echo "✅ 甜甜的生命游戏（凸优化版）完成！"
+
 # 生成ROM文件（调试版本）
 rom-debug: build
 	@echo "🎮 生成Game Boy ROM文件（调试版本）..."

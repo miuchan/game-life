@@ -27,6 +27,14 @@ path = "src/bin/rom_generator.rs"
 name = "advanced-demo"
 path = "src/bin/advanced_demo.rs"
 
+[[bin]]
+name = "sweet-life-game"
+path = "src/bin/sweet_life_game.rs"
+
+[[bin]]
+name = "sweet-life-optimized"
+path = "src/bin/sweet_life_optimized.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0
