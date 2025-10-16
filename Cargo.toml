@@ -43,6 +43,10 @@ path = "src/bin/quantum_resistant_demo.rs"
 name = "ping-pong-automaton"
 path = "src/bin/ping_pong_automaton.rs"
 
+[[bin]]
+name = "spacetime-entanglement"
+path = "src/bin/spacetime_entanglement.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0

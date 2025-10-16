@@ -86,6 +86,12 @@ ping-pong: release
 	cargo run --release --bin ping-pong-automaton
 	@echo "✅ 乒乓自动机演示完成！"
 
+# 运行时空纠缠演示
+spacetime: release
+	@echo "🌌 运行时空纠缠可视化演示..."
+	cargo run --release --bin spacetime-entanglement
+	@echo "✅ 时空纠缠演示完成！"
+
 # 生成ROM文件（调试版本）
 rom-debug: build
 	@echo "🎮 生成Game Boy ROM文件（调试版本）..."
