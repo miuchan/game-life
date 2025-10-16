@@ -1,0 +1,43 @@
+[package]
+name = "gameboy-emulator"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A Game Boy emulator written in Rust"
+license = "MIT"
+repository = "https://github.com/yourusername/gameboy-emulator"
+keywords = ["emulator", "gameboy", "rust", "retro"]
+categories = ["emulators"]
+
+# 库配置
+[lib]
+name = "gameboy_emulator"
+path = "src/lib.rs"
+
+# 二进制文件配置
+[[bin]]
+name = "gameboy-emulator"
+path = "src/main.rs"
+
+# 构建配置
+[profile.dev]
+opt-level = 0
+debug = true
+split-debuginfo = "unpacked"
+overflow-checks = true
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+# 依赖项
+[dependencies]
+# 目前没有外部依赖，所有功能都是原生实现
+
+# 开发依赖
+[dev-dependencies]
+# 可以添加测试相关的依赖
