@@ -55,6 +55,14 @@ path = "src/bin/nintendo_fixed_point.rs"
 name = "gba-demo"
 path = "src/bin/gba_demo.rs"
 
+[[bin]]
+name = "entropy-demo"
+path = "src/bin/entropy_demo.rs"
+
+[[bin]]
+name = "new-life-game"
+path = "src/bin/new_life_game.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0
