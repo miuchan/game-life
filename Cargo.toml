@@ -39,8 +39,8 @@ name = "tic-tac-toe"
 path = "src/games/tic_tac_toe/tic_tac_toe.rs"
 
 [[bin]]
-name = "windows-tetris"
-path = "src/games/tetris/windows_tetris.rs"
+name = "quantum-tetris"
+path = "src/bin/quantum_tetris.rs"
 
 # 演示程序
 [[bin]]
