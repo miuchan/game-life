@@ -1,7 +1,7 @@
 # Game Boy模拟器 Makefile
-# 简化编译和运行过程
+# 重构后的简化编译和运行过程
 
-.PHONY: all build run clean check test release help rom
+.PHONY: all build run clean check test release help rom games demos
 
 # 默认目标
 all: build
@@ -74,6 +74,18 @@ sweet-life-opt: release
 	cargo run --release --bin sweet-life-optimized
 	@echo "✅ 甜甜的生命游戏（凸优化版）完成！"
 
+# 运行新的生命游戏
+new-life: release
+	@echo "🧬 运行新的生命游戏..."
+	cargo run --release --bin new-life-game
+	@echo "✅ 新的生命游戏完成！"
+
+# 运行井字棋游戏
+tic-tac-toe: release
+	@echo "❌ 运行井字棋游戏..."
+	cargo run --release --bin tic-tac-toe
+	@echo "✅ 井字棋游戏完成！"
+
 # 运行抗量子算法演示
 quantum-demo: release
 	@echo "🔐 运行抗量子算法可视化演示..."
@@ -120,26 +132,84 @@ lint:
 	@echo "🔍 代码检查..."
 	cargo clippy
 
+# 运行所有游戏
+games: release
+	@echo "🎮 运行所有游戏..."
+	@echo "🍭 运行甜甜的生命游戏..."
+	cargo run --release --bin sweet-life-game
+	@echo "🍭 运行甜甜的生命游戏（凸优化版）..."
+	cargo run --release --bin sweet-life-optimized
+	@echo "🧬 运行新的生命游戏..."
+	cargo run --release --bin new-life-game
+	@echo "❌ 运行井字棋游戏..."
+	cargo run --release --bin tic-tac-toe
+	@echo "✅ 所有游戏运行完成！"
+
+# 运行所有演示
+demos: release
+	@echo "🎮 运行所有演示程序..."
+	@echo "🔐 运行抗量子算法演示..."
+	cargo run --release --bin quantum-resistant-demo
+	@echo "🏓 运行乒乓自动机演示..."
+	cargo run --release --bin ping-pong-automaton
+	@echo "🌌 运行时空纠缠演示..."
+	cargo run --release --bin spacetime-entanglement
+	@echo "🎮 运行任天堂不动点演示..."
+	cargo run --release --bin nintendo-fixed-point
+	@echo "🎮 运行GBA演示..."
+	cargo run --release --bin gba-demo
+	@echo "🔬 运行熵源演示..."
+	cargo run --release --bin entropy-demo
+	@echo "✅ 所有演示运行完成！"
+
 # 显示帮助信息
 help:
-	@echo "Game Boy模拟器 - 可用命令："
+	@echo "Game Boy模拟器 - 重构后的可用命令："
 	@echo ""
+	@echo "📦 构建命令："
 	@echo "  build        - 构建项目"
-	@echo "  run          - 构建并运行"
-	@echo "  run-fast     - 快速运行（不重新构建）"
-	@echo "  check        - 检查代码"
-	@echo "  test         - 运行测试"
-	@echo "  clean        - 清理构建文件"
 	@echo "  release      - 构建发布版本"
+	@echo "  check        - 检查代码"
+	@echo "  clean        - 清理构建文件"
+	@echo ""
+	@echo "🚀 运行命令："
+	@echo "  run          - 构建并运行主模拟器"
+	@echo "  run-fast     - 快速运行（不重新构建）"
 	@echo "  run-release  - 运行发布版本"
+	@echo ""
+	@echo "🎮 游戏命令："
+	@echo "  games        - 运行所有游戏"
+	@echo "  sweet-life   - 运行甜甜的生命游戏"
+	@echo "  sweet-life-opt - 运行甜甜的生命游戏（凸优化版）"
+	@echo "  new-life     - 运行新的生命游戏"
+	@echo "  tic-tac-toe  - 运行井字棋游戏"
+	@echo ""
+	@echo "🎯 演示命令："
+	@echo "  demos        - 运行所有演示"
+	@echo "  quantum-demo - 运行抗量子算法演示"
+	@echo "  ping-pong    - 运行乒乓自动机演示"
+	@echo "  spacetime    - 运行时空纠缠演示"
+	@echo "  nintendo     - 运行任天堂不动点演示"
+	@echo "  gba          - 运行GBA演示"
+	@echo ""
+	@echo "🛠️ 工具命令："
 	@echo "  rom          - 生成Game Boy ROM文件"
 	@echo "  rom-debug    - 生成ROM文件（调试版本）"
 	@echo "  fmt          - 格式化代码"
 	@echo "  lint         - 代码检查"
+	@echo "  test         - 运行测试"
 	@echo "  help         - 显示此帮助信息"
 	@echo ""
+	@echo "📁 项目结构："
+	@echo "  src/core/    - 核心模拟器模块"
+	@echo "  src/games/   - 游戏实现"
+	@echo "  src/lib/     - 通用库模块"
+	@echo "  docs/        - 项目文档"
+	@echo "  scripts/     - 构建和演示脚本"
+	@echo "  assets/      - 资源文件"
+	@echo ""
 	@echo "示例："
-	@echo "  make run     - 构建并运行模拟器"
-	@echo "  make rom     - 生成可在Game Boy模拟器中运行的ROM文件"
-	@echo "  make clean   - 清理所有构建文件"
+	@echo "  make games   - 运行所有游戏"
+	@echo "  make demos   - 运行所有演示"
 	@echo "  make release - 构建优化版本"
+	@echo "  make clean   - 清理所有构建文件"

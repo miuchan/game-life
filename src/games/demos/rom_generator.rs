@@ -1,6 +1,6 @@
 //! ROM生成工具 - 将模拟器程序转换为Game Boy ROM
 
-use gameboy_emulator::{GameBoy, RomGenerator};
+use crate::{GameBoy, RomGenerator};
 
 fn main() {
     println!("🎮 Game Boy ROM生成器");

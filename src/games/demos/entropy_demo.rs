@@ -2,7 +2,7 @@
 //! 
 //! 展示如何使用多种外部熵源优化概率空间分布
 
-use gameboy_emulator::entropy::{
+use crate::entropy::{
     EntropyManager, EntropyError,
     entropy_source::{EntropySource, SystemTimeEntropy, HardwareEntropy, NetworkEntropy, ProcessEntropy, MemoryEntropy},
     entropy_pool::{PooledEntropy, EntropyQualityAssessor},

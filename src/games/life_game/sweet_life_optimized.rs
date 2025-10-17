@@ -1,7 +1,7 @@
 //! 甜甜的生命游戏 - 凸优化增强版
 
-use gameboy_emulator::{AdvancedGameBoy, RomGenerator};
-use gameboy_emulator::debug::LogLevel;
+use crate::{AdvancedGameBoy, RomGenerator};
+use crate::debug::LogLevel;
 use std::time::{Duration, Instant};
 
 fn main() -> Result<(), String> {

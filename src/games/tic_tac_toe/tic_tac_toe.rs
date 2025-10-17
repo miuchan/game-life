@@ -3,7 +3,7 @@
 //! 本程序不仅提供经典的井字棋游戏，还集成了所有已实现的生命游戏，
 //! 确保它们都能有活力地运行，展示细胞自动机的魅力
 
-use gameboy_emulator::entropy::{
+use crate::entropy::{
     EntropyManager, EntropyError,
     entropy_pool::PooledEntropy,
 };

@@ -1,7 +1,7 @@
 //! 高级GameBoy模拟器演示程序
 
-use gameboy_emulator::{AdvancedGameBoy, RomGenerator};
-use gameboy_emulator::debug::LogLevel;
+use crate::{AdvancedGameBoy, RomGenerator};
+use crate::debug::LogLevel;
 
 fn main() -> Result<(), String> {
     println!("🎮 高级GameBoy模拟器演示");

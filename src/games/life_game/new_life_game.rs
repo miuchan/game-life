@@ -2,7 +2,7 @@
 //! 
 //! 使用多种外部熵源优化概率空间分布，生成更真实的生命模式
 
-use gameboy_emulator::entropy::{
+use crate::entropy::{
     EntropyManager, EntropyError,
     entropy_pool::PooledEntropy,
 };

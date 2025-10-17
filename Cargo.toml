@@ -15,57 +15,61 @@ name = "gameboy_emulator"
 path = "src/lib.rs"
 
 # 二进制文件配置
+# 二进制文件配置 - 按功能分组
+# 核心模拟器
 [[bin]]
 name = "gameboy-emulator"
 path = "src/main.rs"
 
+# 游戏实现
 [[bin]]
-name = "rom-generator"
-path = "src/bin/rom_generator.rs"
-
-[[bin]]
-name = "advanced-demo"
-path = "src/bin/advanced_demo.rs"
+name = "new-life-game"
+path = "src/games/life_game/new_life_game.rs"
 
 [[bin]]
 name = "sweet-life-game"
-path = "src/bin/sweet_life_game.rs"
+path = "src/games/life_game/sweet_life_game.rs"
 
 [[bin]]
 name = "sweet-life-optimized"
-path = "src/bin/sweet_life_optimized.rs"
-
-[[bin]]
-name = "quantum-resistant-demo"
-path = "src/bin/quantum_resistant_demo.rs"
-
-[[bin]]
-name = "ping-pong-automaton"
-path = "src/bin/ping_pong_automaton.rs"
-
-[[bin]]
-name = "spacetime-entanglement"
-path = "src/bin/spacetime_entanglement.rs"
-
-[[bin]]
-name = "nintendo-fixed-point"
-path = "src/bin/nintendo_fixed_point.rs"
-
-[[bin]]
-name = "gba-demo"
-path = "src/bin/gba_demo.rs"
-
-[[bin]]
-name = "entropy-demo"
-path = "src/bin/entropy_demo.rs"
-
-[[bin]]
-name = "new-life-game"
-path = "src/bin/new_life_game.rs"
+path = "src/games/life_game/sweet_life_optimized.rs"
 
 [[bin]]
 name = "tic-tac-toe"
-path = "src/bin/tic_tac_toe.rs"
+path = "src/games/tic_tac_toe/tic_tac_toe.rs"
+
+# 演示程序
+[[bin]]
+name = "rom-generator"
+path = "src/games/demos/rom_generator.rs"
+
+[[bin]]
+name = "advanced-demo"
+path = "src/games/demos/advanced_demo.rs"
+
+[[bin]]
+name = "quantum-resistant-demo"
+path = "src/games/demos/quantum_resistant_demo.rs"
+
+[[bin]]
+name = "ping-pong-automaton"
+path = "src/games/demos/ping_pong_automaton.rs"
+
+[[bin]]
+name = "spacetime-entanglement"
+path = "src/games/demos/spacetime_entanglement.rs"
+
+[[bin]]
+name = "nintendo-fixed-point"
+path = "src/games/demos/nintendo_fixed_point.rs"
+
+[[bin]]
+name = "gba-demo"
+path = "src/games/demos/gba_demo.rs"
+
+[[bin]]
+name = "entropy-demo"
+path = "src/games/demos/entropy_demo.rs"
 
 # 构建配置
 [profile.dev]

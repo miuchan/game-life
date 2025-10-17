@@ -3,8 +3,8 @@
 //! 这个demo展示了量子计算对传统密码学的威胁，
 //! 以及抗量子密码学算法的解决方案
 
-use gameboy_emulator::{AdvancedGameBoy, RomGenerator};
-use gameboy_emulator::debug::LogLevel;
+use crate::{AdvancedGameBoy, RomGenerator};
+use crate::debug::LogLevel;
 use std::time::Instant;
 
 fn main() -> Result<(), String> {

@@ -3,7 +3,7 @@
 //! 这个程序展示了GBA模拟器的功能，
 //! 包括CPU执行、图形渲染等
 
-use gameboy_emulator::gba::{GBASystem, GBAState};
+use crate::gba::{GBASystem, GBAState};
 use std::time::Instant;
 
 fn main() -> Result<(), String> {
