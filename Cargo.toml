@@ -63,6 +63,10 @@ path = "src/bin/entropy_demo.rs"
 name = "new-life-game"
 path = "src/bin/new_life_game.rs"
 
+[[bin]]
+name = "tic-tac-toe"
+path = "src/bin/tic_tac_toe.rs"
+
 # 构建配置
 [profile.dev]
 opt-level = 0
