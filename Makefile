@@ -86,6 +86,12 @@ tic-tac-toe: release
 	cargo run --release --bin tic-tac-toe
 	@echo "✅ 井字棋游戏完成！"
 
+# 运行Windows俄罗斯方块
+windows-tetris: release
+	@echo "🧩 运行Windows俄罗斯方块..."
+	cargo run --release --bin windows-tetris
+	@echo "✅ Windows俄罗斯方块完成！"
+
 # 运行抗量子算法演示
 quantum-demo: release
 	@echo "🔐 运行抗量子算法可视化演示..."
@@ -143,6 +149,8 @@ games: release
 	cargo run --release --bin new-life-game
 	@echo "❌ 运行井字棋游戏..."
 	cargo run --release --bin tic-tac-toe
+	@echo "🧩 运行Windows俄罗斯方块..."
+	cargo run --release --bin windows-tetris
 	@echo "✅ 所有游戏运行完成！"
 
 # 运行所有演示
@@ -183,6 +191,7 @@ help:
 	@echo "  sweet-life-opt - 运行甜甜的生命游戏（凸优化版）"
 	@echo "  new-life     - 运行新的生命游戏"
 	@echo "  tic-tac-toe  - 运行井字棋游戏"
+	@echo "  windows-tetris - 运行Windows俄罗斯方块"
 	@echo ""
 	@echo "🎯 演示命令："
 	@echo "  demos        - 运行所有演示"

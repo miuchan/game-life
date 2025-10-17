@@ -24,6 +24,7 @@ pub mod core {
 pub mod games {
     pub mod life_game;
     pub mod tic_tac_toe;
+    pub mod tetris;
     pub mod demos;
 }
 
